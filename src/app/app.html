@@ -1,48 +1,274 @@
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
-<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
-<!-- * * * * * * * * * * and can be replaced.  * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * Delete the template below * * * * * * * * * -->
-<!-- * * * * * * * to get started with your project! * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<div class="main-container">
+  <header class="header">
+    <div class="banner-top">
+      <div class="banner-flags"></div>
+    </div>
+    <div class="logo-container">
+      <!-- Espacio para el logo de Fede y Lu -->
+      <div class="logo-placeholder">
+        <h1>Fede y Lu</h1>
+        <p>Veterinaria & Estética</p>
+      </div>
+    </div>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#agendar">Agendar Cita</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="inicio" class="hero-section">
+      <div class="flower-decoration flower-top-left"></div>
+      <div class="flower-decoration flower-bottom-right"></div>
+      <div class="hero-content">
+        <div class="banner-title">
+          <h2>Cuidado profesional para tu mascota</h2>
+          <div class="banner-brush"></div>
+        </div>
+        <p>Servicios de baño, corte y tratamiento para perros y gatos</p>
+        <button class="btn-primary">Agendar una cita</button>
+      </div>
+    </section>
+
+    <section id="servicios" class="services-section">
+      <div class="section-header">
+        <h2>Nuestros Servicios</h2>
+        <div class="banner-brush"></div>
+      </div>
+      <div class="services-container">
+        <div class="service-card">
+          <div class="service-icon">🛁</div>
+          <h3>Baño Premium</h3>
+          <p>Baños con productos de calidad para mantener el pelaje de tu mascota limpio y saludable.</p>
+          <button class="btn-service">Reservar</button>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">✂️</div>
+          <h3>Corte Profesional</h3>
+          <p>Cortes profesionales adaptados a la raza y necesidades específicas de tu mascota.</p>
+          <button class="btn-service">Reservar</button>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">💊</div>
+          <h3>Desparasitación</h3>
+          <p>Tratamientos especializados para problemas de piel, parásitos y otras condiciones.</p>
+          <button class="btn-service">Reservar</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="agendar" class="booking-section">
+      <h2>Agenda tu Cita</h2>
+      <form class="booking-form" (ngSubmit)="agendarCita()">
+        <div class="form-group">
+          <label for="pet-name">Nombre de la mascota</label>
+          <input type="text" id="pet-name" placeholder="Nombre de tu mascota" required>
+        </div>
+        <div class="form-group">
+          <label for="pet-type">Tipo de mascota</label>
+          <select id="pet-type" required>
+            <option value="">Selecciona una opción</option>
+            <option value="perro">Perro</option>
+            <option value="gato">Gato</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="service-type">Servicio</label>
+          <select id="service-type" required>
+            <option value="">Selecciona un servicio</option>
+            <option value="bano">Baño</option>
+            <option value="corte">Corte</option>
+            <option value="tratamiento">Tratamiento</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="date">Fecha</label>
+          <input type="date" id="date" required>
+        </div>
+        <div class="form-group">
+          <label for="time">Hora</label>
+          <input type="time" id="time" required>
+        </div>
+        <div class="form-group">
+          <label for="owner-name">Tu nombre</label>
+          <input type="text" id="owner-name" placeholder="Tu nombre completo" required>
+        </div>
+        <div class="form-group">
+          <label for="owner-phone">Teléfono</label>
+          <input type="tel" id="owner-phone" placeholder="Tu número de teléfono" required>
+        </div>
+        <button type="submit" class="btn-primary">Confirmar Cita</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-info">
+        <h3>Fede y Lu</h3>
+        <p>Veterinaria & Estética para Mascotas</p>
+        <p>Dirección: Calle Principal #123</p>
+        <p>Teléfono: (123) 456-7890</p>
+      </div>
+      <div class="footer-hours">
+        <h3>Horario de Atención</h3>
+        <p>Lunes a Viernes: 9:00 AM - 6:00 PM</p>
+        <p>Sábados: 9:00 AM - 2:00 PM</p>
+        <p>Domingos: Cerrado</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2023 Fede y Lu - Todos los derechos reservados</p>
+    </div>
+  </footer>
+</div>
 
 <style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+  
   :host {
-    --bright-blue: oklch(51.01% 0.274 263.83);
-    --electric-violet: oklch(53.18% 0.28 296.97);
-    --french-violet: oklch(47.66% 0.246 305.88);
-    --vivid-pink: oklch(69.02% 0.277 332.77);
-    --hot-red: oklch(61.42% 0.238 15.34);
-    --orange-red: oklch(63.32% 0.24 31.68);
-
-    --gray-900: oklch(19.37% 0.006 300.98);
-    --gray-700: oklch(36.98% 0.014 302.71);
+    --primary-color: #00BCD4; /* Color turquesa más brillante como en la imagen */
+    --secondary-color: #FFD000; /* Color amarillo/mostaza más brillante */
+    --text-color: #333333;
+    --background-color: #FFFFFF; /* Fondo blanco */
+    --accent-color: #FF6B6B;
+    --light-gray: #F7F7F7;
     --gray-400: oklch(70.9% 0.015 304.04);
-
-    --red-to-pink-to-purple-vertical-gradient: linear-gradient(
-      180deg,
-      var(--orange-red) 0%,
-      var(--vivid-pink) 50%,
-      var(--electric-violet) 100%
-    );
-
-    --red-to-pink-to-purple-horizontal-gradient: linear-gradient(
-      90deg,
-      var(--orange-red) 0%,
-      var(--vivid-pink) 50%,
-      var(--electric-violet) 100%
-    );
-
-    --pill-accent: var(--bright-blue);
-
-    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-      Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-      "Segoe UI Symbol";
-    box-sizing: border-box;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
   }
+  
+  /* Estilos para banderines como en la imagen */
+  .banner-top {
+    background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)), #f5f5f5;
+    padding: 10px 0;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .banner-flags {
+    height: 30px;
+    background-image: repeating-linear-gradient(45deg, 
+      var(--primary-color) 0px, var(--primary-color) 30px,
+      var(--secondary-color) 30px, var(--secondary-color) 60px);
+    margin-bottom: 10px;
+  }
+  
+  /* Mejoras en las tarjetas de servicios */
+  .service-card {
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    background-color: white;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .service-card:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: var(--primary-color);
+  }
+  
+  .service-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .service-icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: var(--primary-color);
+  }
+  
+  /* Elementos decorativos como flores */
+  .flower-decoration {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-color: white;
+    border-radius: 50%;
+    z-index: 1;
+  }
+  
+  .flower-decoration:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    transform: scale(0.8);
+  }
+  
+  .flower-top-left {
+    top: 20px;
+    left: 20px;
+  }
+  
+  .flower-bottom-right {
+    bottom: 20px;
+    right: 20px;
+  }
+  
+  /* Estilo para el banner con pincelada */
+  .banner-brush {
+    height: 40px;
+    background-color: var(--secondary-color);
+    margin-top: -15px;
+    border-radius: 5px;
+    position: relative;
+    z-index: -1;
+  }
+  
+  .banner-title {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .section-header {
+    position: relative;
+    margin-bottom: 30px;
+  }
+  
+  /* Botones de servicio */
+  .btn-service {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 500;
+    margin-top: 15px;
+    transition: all 0.3s ease;
+  }
+  
+  .btn-service:hover {
+    background-color: var(--secondary-color);
+    transform: scale(1.05);
+  }
+
+body {
+  font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Para aplicar border-box a todo */
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+  /* End of host styles */
 
   h1 {
     font-size: 3.125rem;
